@@ -12,8 +12,8 @@ export async function SendEmail(
     const data = await resend.emails.send({
       from: "lia@emelia.pl",
       to: email,
-      subject: "Your message has been sent!",
-      html: `Your email: ${email} will now receive site updates tro Emelia.pl :w:`
+      subject: "Emelia Paisley's site!",
+      html: `Your email: ${email} will now receive site updates to Emelia.pl :w:`
     });
     resend.emails.send({
       from: "postmaster@emelia.pl",
