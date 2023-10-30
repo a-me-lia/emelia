@@ -2,6 +2,12 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, IBM_Plex_Mono } from 'next/font/google'
 
+import { Suspense } from 'react'
+
+
+
+import Nav from './components/nav'
+
 const inter = Inter({ subsets: ['latin'] , variable:"--font-inter"})
 
 const plexMono = IBM_Plex_Mono({
@@ -44,7 +50,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans text-neutral-800  ${plexMono.variable} font-ibm`}>{children}</body>
+      <body className={`${inter.variable} font-sans text-neutral-800  ${plexMono.variable} font-ibm`}>
+        <Suspense><Nav/></Suspense>
+        {children}
+        </body>
     </html>
   )
 }
