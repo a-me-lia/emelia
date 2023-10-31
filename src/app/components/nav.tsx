@@ -25,7 +25,7 @@ const navItems = {
     },
     "/about": {
       name: "about",
-      id: "4",
+      id: "5",
     },
   };
 
